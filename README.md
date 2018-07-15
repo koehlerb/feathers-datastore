@@ -18,6 +18,8 @@ This service follows the standard interface followed by Feathers database servic
 
 ### Caveats
 
+(This fork has basic support for $limit and $sort.)
+
 Proper pagination, sorting and certain query filters are not yet implemented. You cannot use: `$in, $nin, $ne, $or`. Some of these will be implemented in future, but may not be due to the limitations of [Google Datastore querying](https://cloud.google.com/datastore/docs/concepts/queries).
 
 It's also worth noting that unless you index your datastore properly, you may run into issues running many combined filters. See [querying Google Datastore](https://cloud.google.com/datastore/docs/concepts/queries).

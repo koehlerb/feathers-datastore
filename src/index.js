@@ -148,7 +148,7 @@ class Datastore {
   _find(params = {}) {
     params.query = params.query || {};
 
-    let { ancestor, namespace, kind = this.kind, $select, ...query } = params.query,
+    let { ancestor, namespace, kind = this.kind, $select, $limit, $sort, ...query } = params.query,
         dsQuery = this.store.createQuery(namespace, kind),
         retainOnlySelected = identity,
         filterOutAncestor = identity,
@@ -202,6 +202,22 @@ class Datastore {
       }, []);
 
     dsQuery = filters.reduce((q, filter) => q.filter(...filter), dsQuery);
+
+    if ( $limit ) {
+      dsQuery = dsQuery.limit( $limit );
+    }
+
+    if ( $sort ) {
+      for (var prop in $sort) {
+        if ($sort.hasOwnProperty(prop)) {
+          if ($sort[prop] == 1 ) {
+            dsQuery = dsQuery.order( prop );
+          } else {
+            dsQuery = dsQuery.order( prop, { descending: true } );
+          }
+        }
+      }
+    }
 
     return dsQuery.run()
       .then(([ e ]) => e)

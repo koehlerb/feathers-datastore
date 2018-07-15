@@ -1,8 +1,8 @@
 {
-  "name": "feathers-datastore",
+  "name": "@koehlerb/feathers-datastore",
   "description": "Feathers service for Google Datastore",
   "version": "0.1.9",
-  "homepage": "https://github.com/bedeoverend/feathers-datastore",
+  "homepage": "https://github.com/koehlerb/feathers-datastore",
   "main": "lib/",
   "keywords": [
     "feathers",
@@ -15,14 +15,14 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/bedeoverend/feathers-datastore.git"
+    "url": "git://github.com/koehlerb/feathers-datastore.git"
   },
   "author": {
     "name": "Bede Overend"
   },
   "contributors": [],
   "bugs": {
-    "url": "https://github.com/bedeoverend/feathers-datastore/issues"
+    "url": "https://github.com/koehlerb/feathers-datastore/issues"
   },
   "engines": {
     "node": ">= 4.0.0"
