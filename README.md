@@ -9,7 +9,7 @@ _Note: this service is still in its early stages and may be buggy and change qui
 ## Installation
 
 ```
-npm install feathers-datastore --save
+npm install @koehlerb/feathers-datastore --save
 ```
 
 ## Documentation
