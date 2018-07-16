@@ -1,7 +1,7 @@
 {
   "name": "@koehlerb/feathers-datastore",
   "description": "Feathers service for Google Datastore",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "homepage": "https://github.com/koehlerb/feathers-datastore",
   "main": "lib/",
   "keywords": [
