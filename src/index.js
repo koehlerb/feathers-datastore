@@ -185,16 +185,6 @@ class Datastore {
         special = Object.entries(value)
           .filter(([ op ]) => opMap[op])
           .map(([ op, val ]) => {
-            // Try convert it into a number
-            if (typeof val === 'string') {
-              let valAsNum = parseFloat(val);
-
-              if (!isNaN(valAsNum)) {
-                // Its a number, assign it to original val
-                val = valAsNum;
-              }
-            }
-
             return [ key, opMap[op], val ];
           });
 
